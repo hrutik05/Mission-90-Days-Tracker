@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GenAI × Forward Deployed Engineer — 60 Day Tracker</title>
+<style>
+:root{--bg:#f5f1e8;--fg:#302d29;--card:#fffdf8;--muted:#746c60;--line:#ded5c5;--primary:#6656c7;--primary2:#eeeaff;--green:#2d7a61;--orange:#b66b2e;--shadow:0 8px 24px #372b160d}
+.dark{--bg:#191a22;--fg:#f2efe9;--card:#232530;--muted:#b0acbb;--line:#3b3c49;--primary:#b1a7ff;--primary2:#37324e;--green:#73c8a7;--orange:#e7ad75;--shadow:0 8px 24px #0003}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.5}button,input,select{font:inherit}button{cursor:pointer}.wrap{max-width:1280px;margin:auto;padding:26px 20px 60px}.top{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}.eyebrow{font:600 12px ui-monospace,monospace;letter-spacing:.13em;text-transform:uppercase;color:var(--primary)}h1{font-size:clamp(28px,4vw,44px);line-height:1.1;margin:8px 0}h2{font-size:22px;margin:0 0 8px}h3{font-size:16px;margin:0}.sub{color:var(--muted);max-width:760px}.actions{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--fg);padding:9px 13px;font-weight:650;font-size:13px}.btn.primary{background:var(--primary);border-color:var(--primary);color:white}.dark .btn.primary{color:#191a22}.hero{margin:24px 0 18px;padding:22px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(120deg,var(--card),var(--primary2));box-shadow:var(--shadow);display:grid;grid-template-columns:1.5fr 1fr;gap:22px}.hero p{margin:6px 0;color:var(--muted)}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:4px 9px;font-size:12px;font-weight:700;margin:3px 4px 0 0}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0 22px}.metric,.panel,.week,.task{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}.metric{padding:17px}.metric .label{font-size:12px;color:var(--muted)}.metric .num{font:700 28px ui-monospace,monospace;margin-top:3px}.progress{height:8px;border-radius:99px;background:var(--line);overflow:hidden;margin-top:10px}.bar{height:100%;background:var(--primary);width:0;transition:width .25s}.toolbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:18px 0}.search{min-width:220px;flex:1;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--fg);padding:10px 12px}.tabs{display:flex;gap:7px;overflow:auto;padding:3px 2px 12px;margin:8px 0 14px}.tab{white-space:nowrap;border:1px solid var(--line);background:var(--card);color:var(--muted);border-radius:10px;padding:10px 13px;font-size:13px;font-weight:700}.tab.active{background:var(--primary2);border-color:var(--primary);color:var(--fg)}.content{display:grid;grid-template-columns:1fr;gap:16px}.section-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap;padding:19px 20px 0}.section-head p{color:var(--muted);font-size:13px;margin:4px 0}.weeks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:16px}.week{padding:16px;box-shadow:none}.weektop{display:flex;justify-content:space-between;gap:10px;align-items:start;margin-bottom:10px}.week small{color:var(--muted)}.daylist{display:grid;gap:8px}.task{box-shadow:none;padding:12px;display:grid;grid-template-columns:22px 1fr auto;gap:10px;align-items:start;border-radius:11px}.task.done{border-color:var(--green);background:color-mix(in srgb,var(--green) 7%,var(--card))}.task input{width:17px;height:17px;accent-color:var(--primary);margin-top:3px}.task-title{font-weight:700;font-size:14px}.task-desc{font-size:12px;color:var(--muted);margin-top:3px}.tag{font-size:10px;text-transform:uppercase;letter-spacing:.05em;border:1px solid var(--line);border-radius:6px;padding:3px 6px;color:var(--muted);white-space:nowrap}.links{padding:0 20px 20px}.links a{color:var(--primary);font-weight:650}.note{font-size:12px;color:var(--muted);margin-top:18px}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:16px}.resource{padding:16px;border:1px solid var(--line);border-radius:12px}.resource p{font-size:13px;color:var(--muted)}.resource a{color:var(--primary);font-weight:700}.footer{margin-top:20px;padding:16px;color:var(--muted);font-size:12px;text-align:center}.empty{padding:25px;text-align:center;color:var(--muted)}@media(max-width:800px){.hero{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr)}.weeks,.two-col{grid-template-columns:1fr}}@media(max-width:460px){.wrap{padding:18px 12px 40px}.metrics{gap:8px}.metric{padding:12px}.metric .num{font-size:23px}.task{grid-template-columns:20px 1fr}.task .tag{grid-column:2;justify-self:start}.hero{padding:16px}.section-head{padding:16px 14px 0}.weeks,.two-col{padding:12px}.links{padding:0 14px 16px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+ <div><div class="eyebrow">60-day learning sprint · Oct–Dec 2026</div><h1>GenAI × Forward Deployed Engineer</h1><div class="sub">From customer problem discovery to a reliable, deployed AI product. Learn concepts, build daily, and ship a portfolio project.</div></div>
+ <div class="actions"><button class="btn" id="themeBtn">☾ Theme</button><button class="btn" id="exportBtn">Export progress</button><button class="btn" id="resetBtn">Reset tracker</button></div>
+</header>
+<section class="hero">
+ <div><div class="eyebrow">Your mission</div><h2>Build like an engineer, not just a tutorial watcher.</h2><p>Use Coder Army's Forward Deployed Engineer / GenAI playlist as the core lecture path. Pair each lesson with implementation, tests, customer-facing documentation, and deployment work.</p><span class="pill">2–3 hours/day</span><span class="pill">6 study days + 1 review day/week</span><span class="pill">Python · APIs · RAG · Agents · Deployment</span></div>
+ <div><h3>Recommended daily routine</h3><p>45–60 min lecture/reading · 60–90 min coding · 15 min notes · 15 min Git commit or demo.</p><p><b>Finish line:</b> one deployed, documented AI application with retrieval, tool use, evaluation, logs, and a clear business outcome.</p><div class="progress"><div class="bar" id="heroBar"></div></div><p id="heroPct">0% complete</p></div>
+</section>
+<section class="metrics">
+ <div class="metric"><div class="label">TRACKER CHECKPOINTS</div><div class="num" id="total">0</div><div class="progress"><div class="bar" id="totalBar"></div></div></div>
+ <div class="metric"><div class="label">COMPLETED</div><div class="num" id="completed">0</div><div class="sub">Tasks checked off</div></div>
+ <div class="metric"><div class="label">REVISION / TESTS</div><div class="num" id="revised">0</div><div class="sub">Review and validation items</div></div>
+ <div class="metric"><div class="label">OVERALL PROGRESS</div><div class="num" id="percent">0%</div><div class="progress"><div class="bar" id="mainBar"></div></div></div>
+</section>
+<div class="toolbar"><input class="search" id="search" placeholder="Search topics, tasks, or keywords…"><select class="btn" id="filter"><option value="all">All tasks</option><option value="open">Not completed</option><option value="done">Completed</option></select><button class="btn" id="expandBtn">Expand all weeks</button></div>
+<nav class="tabs" id="tabs"></nav>
+<main id="main" class="panel"></main>
+<section class="panel" style="margin-top:16px">
+ <div class="section-head"><div><h2>Resource shelf</h2><p>Start with the playlist, then use official docs when implementing a feature.</p></div></div>
+ <div class="two-col">
+  <div class="resource"><h3>1 · Coder Army — FDE / GenAI</h3><p>Core lecture sequence covering the FDE role, LLM foundations, embeddings, vector search, RAG, structured outputs, and MCP. Match each topic below to the corresponding playlist lecture.</p><a href="https://www.youtube.com/results?search_query=Coder+Army+Forward+Deployed+Engineer+Full+Course+GENAI" target="_blank" rel="noopener">Open Coder Army playlist search ↗</a></div>
+  <div class="resource"><h3>2 · FastAPI documentation</h3><p>Build typed APIs, request validation, error handling, and interactive API docs.</p><a href="https://fastapi.tiangolo.com/" target="_blank" rel="noopener">Official docs ↗</a></div>
+  <div class="resource"><h3>3 · LangGraph documentation</h3><p>Use only after understanding basic tool calling and stateful workflows. Learn graph state, nodes, edges, and human approval.</p><a href="https://docs.langchain.com/oss/python/langgraph/overview" target="_blank" rel="noopener">Official docs ↗</a></div>
+  <div class="resource"><h3>4 · Docker getting started</h3><p>Package your app reproducibly and document how to run it locally.</p><a href="https://docs.docker.com/get-started/" target="_blank" rel="noopener">Official docs ↗</a></div>
+ </div>
+</section>
+<div class="footer">Progress is saved in this browser on this device. Use “Export progress” to download a backup. This is a practical 60-day plan, not a guarantee of job readiness.</div>
+</div>
+<script>
+const phases=[
+{title:"Week 1 · Foundations & FDE mindset",subtitle:"Days 1–7 · Understand the customer problem before choosing the model.",tasks:[
+["Day 01","FDE role and problem discovery","Watch the Coder Army FDE introduction. Write a one-page brief for a real user problem: user, pain, current workflow, success metric.","Learn"],
+["Day 02","AI → ML → deep learning → GenAI","Explain the evolution in your own words. Draw where an LLM fits and where it does not.","Learn"],
+["Day 03","LLM basics: tokens and context","Study tokens, context windows, latency, cost, temperature, and hallucinations. Test prompts with 3 variants.","Learn"],
+["Day 04","Transformer intuition","Understand embeddings, attention, and next-token prediction at a high level. Write a 10-line explainer.","Learn"],
+["Day 05","Python project setup","Create a virtual environment, requirements file, .env.example, clean src/ structure, and Git repository.","Build"],
+["Day 06","HTTP, JSON, REST and Git","Build a small Python API client; handle status codes, timeouts, JSON parsing, and exceptions.","Build"],
+["Day 07","Weekly review + discovery memo","Review notes; interview one potential user or simulate discovery. Define MVP, non-goals, acceptance criteria, and risks.","Review"]]},
+{title:"Week 2 · LLM APIs & reliable backend",subtitle:"Days 8–14 · Turn model calls into maintainable application code.",tasks:[
+["Day 08","LLM provider/API basics","Call one hosted LLM from Python using an API key stored in environment variables; never commit secrets.","Build"],
+["Day 09","Prompt design and iteration","Create system/user prompts, few-shot examples, and a small set of representative test questions.","Build"],
+["Day 10","Structured outputs","Return validated JSON/Pydantic objects for a task such as support-ticket classification. Test malformed output.","Build"],
+["Day 11","Streaming, errors and retries","Add timeouts, bounded retries, rate-limit handling, and user-friendly error messages.","Build"],
+["Day 12","FastAPI fundamentals","Create /health and /chat endpoints with request/response models and interactive API docs.","Build"],
+["Day 13","Testing and configuration","Add unit tests for validation and API errors. Add config management and redact secrets from logs.","Build"],
+["Day 14","Mini-project checkpoint","Ship a small LLM-backed API with README, setup steps, example requests, tests, and known limitations.","Review"]]},
+{title:"Week 3 · Embeddings & vector search",subtitle:"Days 15–21 · Learn how semantic retrieval works under the hood.",tasks:[
+["Day 15","Embeddings intuition","Generate embeddings for sample text and compare semantic similarity. Record where similarity fails.","Learn"],
+["Day 16","Chunking and metadata","Implement PDF/text ingestion, sensible chunk sizes, overlap, source IDs, and metadata fields.","Build"],
+["Day 17","Vector index basics","Store embeddings in FAISS or a vector database. Understand vectors, distance metrics, and top-k retrieval.","Build"],
+["Day 18","Vector DB internals","Study nearest-neighbour search and the basic purpose of ANN/HNSW/IVF. Explain recall vs latency trade-offs.","Learn"],
+["Day 19","Retrieval experiments","Compare chunk sizes and top-k values on 15 questions. Record whether the correct evidence is retrieved.","Build"],
+["Day 20","Persistence and re-indexing","Make ingestion repeatable; prevent duplicate documents and provide a safe way to rebuild the index.","Build"],
+["Day 21","Retrieval review","Create a small retrieval test set and report top-k hit rate, failure examples, and next improvements.","Review"]]},
+{title:"Week 4 · RAG end to end",subtitle:"Days 22–28 · Build an evidence-grounded assistant.",tasks:[
+["Day 22","RAG architecture","Draw ingestion → chunking → embeddings → index → retrieval → prompt → answer. Explain each boundary.","Learn"],
+["Day 23","Baseline RAG pipeline","Build a question-answering flow that supplies retrieved passages and asks the model to cite sources.","Build"],
+["Day 24","Grounding and abstention","Require source-grounded answers; return “not found” when evidence is insufficient. Test unanswerable questions.","Build"],
+["Day 25","Advanced retrieval: hybrid search","Understand keyword + semantic retrieval and when exact identifiers need lexical search.","Learn"],
+["Day 26","Reranking and query rewriting","Implement or prototype one improvement and compare against your baseline retrieval results.","Build"],
+["Day 27","RAG evaluation","Create 20 test questions and score retrieval relevance, answer correctness, groundedness, latency, and cost manually or with an evaluator.","Build"],
+["Day 28","RAG demo and review","Record a short demo. Document data limitations, failure cases, evaluation results, and what changed after testing.","Review"]]},
+{title:"Week 5 · Tools, MCP & agent workflows",subtitle:"Days 29–35 · Give the model bounded actions, not unlimited authority.",tasks:[
+["Day 29","Tool/function calling","Create two safe tools, such as search knowledge base and look up a ticket. Validate all arguments server-side.","Build"],
+["Day 30","Agent vs workflow","Compare a deterministic workflow with an agent loop. Choose the simplest design for each use case.","Learn"],
+["Day 31","MCP concepts","Study MCP client/server, tools, resources, and prompts. Draw how a model-enabled app connects to an external tool.","Learn"],
+["Day 32","Build a tiny MCP server","Expose one local read-only tool and test it from a compatible client or a minimal local harness.","Build"],
+["Day 33","State and conversation memory","Persist conversation IDs and selected history; distinguish short-term chat history from a knowledge base.","Build"],
+["Day 34","Safety and human approval","Add tool allowlists, input validation, least privilege, audit records, and approval before consequential actions.","Build"],
+["Day 35","Agent test suite","Test successful calls, invalid arguments, tool failures, loops/timeouts, prompt injection, and no-evidence cases.","Review"]]},
+{title:"Week 6 · Production-minded application",subtitle:"Days 36–42 · Build the product around the AI, not just the prompt.",tasks:[
+["Day 36","Choose capstone and user","Pick one: internal policy copilot, customer-support assistant, or incident-response knowledge copilot. Define a specific user and measurable outcome.","Plan"],
+["Day 37","Requirements and architecture","Write user stories, acceptance criteria, data flow, component diagram, API contract, and threat/risk list.","Plan"],
+["Day 38","Data ingestion pipeline","Implement upload/ingest flow with file type checks, size limits, parse errors, and metadata tracking.","Build"],
+["Day 39","Backend and persistence","Connect FastAPI to a database for users/sessions/documents/audit metadata; keep vector storage concerns separate.","Build"],
+["Day 40","Frontend integration","Build a usable UI for chat, sources, loading/errors, feedback, and document status. Connect it to your API.","Build"],
+["Day 41","Observability","Add structured logs, request IDs, latency tracking, token/cost estimates, and traceable retrieval/tool steps without logging secrets.","Build"],
+["Day 42","Integration test checkpoint","Test full user flow from document ingestion to sourced answer. Fix the top three usability or reliability problems.","Review"]]},
+{title:"Week 7 · Deployment, quality & customer feedback",subtitle:"Days 43–49 · Make it reproducible, inspectable, and useful.",tasks:[
+["Day 43","Dockerize the app","Create Dockerfile and compose setup if useful. Verify a clean startup from documented commands.","Build"],
+["Day 44","Deployment","Deploy to a platform you can access. Configure environment variables and a health check; do not expose credentials.","Build"],
+["Day 45","Security and privacy pass","Review secrets, file upload risks, access control, prompt injection, sensitive logging, and data retention.","Build"],
+["Day 46","Regression and quality gates","Run unit/integration tests and your 20-question RAG evaluation after changes. Track regressions.","Build"],
+["Day 47","Latency and cost improvements","Measure baseline; optimize only after measurement (retrieval, caching, model choice, prompt size, or streaming).","Build"],
+["Day 48","User feedback loop","Ask 2 people to try the app. Record task completion, confusion, failed answers, and prioritized fixes.","Field"],
+["Day 49","Fixes + weekly review","Implement the highest-value fix. Update README, known limitations, and before/after metrics.","Review"]]},
+{title:"Week 8 · Portfolio & FDE interview readiness",subtitle:"Days 50–56 · Communicate the business result and engineering trade-offs.",tasks:[
+["Day 50","Project narrative","Write the story: customer pain → discovery → requirements → architecture → prototype → validation → measurable outcome.","Portfolio"],
+["Day 51","Architecture walkthrough","Prepare a 5-minute diagram walkthrough covering API, LLM, retrieval, vector store, DB, logging, and deployment.","Portfolio"],
+["Day 52","Debugging drill","Intentionally break retrieval, API key config, malformed input, and provider timeout. Diagnose from logs and tests.","Practice"],
+["Day 53","FDE customer scenarios","Practice clarifying vague requests, scoping an MVP, handling missing data, aligning stakeholders, and managing changing requirements.","Practice"],
+["Day 54","Technical interview review","Explain embeddings, RAG, chunking, vector search, reranking, tool calling, MCP, evaluation, latency, and security without notes.","Practice"],
+["Day 55","Resume + GitHub polish","Add concise project impact, stack, architecture, demo link, setup instructions, screenshots, and test/evaluation evidence.","Portfolio"],
+["Day 56","Mock demo and review","Give a 7-minute demo and answer: why this solution, what failed, how measured, what would scale next? Record yourself.","Review"]]},
+{title:"Days 57–60 · Final polish & next steps",subtitle:"Ship a credible artifact; identify gaps honestly.",tasks:[
+["Day 57","Production checklist","Verify clean install, environment example, no committed secrets, health endpoint, tests, error states, and clear README.","Ship"],
+["Day 58","Final user acceptance test","Run five realistic end-to-end scenarios and one adversarial/unsupported scenario. Log results and fix blockers.","Ship"],
+["Day 59","Portfolio demo package","Publish a short demo video or GIF, architecture diagram, sample inputs/outputs, limitations, and deployment link.","Ship"],
+["Day 60","Retrospective + next 30 days","Write what you can confidently explain, remaining gaps, interview stories, and a realistic follow-on plan.","Review"]]}
+];
+const revisionWords=["review","revision","test suite","evaluation","checkpoint","retrospective","mock demo","acceptance test","review +","debugging drill"];
+let allTasks=[];
+phases.forEach((p,pi)=>p.tasks.forEach((t,ti)=>allTasks.push({id:`p${pi}t${ti}`,phase:pi,day:t[0],title:t[1],desc:t[2],tag:t[3]})));
+const KEY="genai_fde_60day_tracker_v1";
+let state=JSON.parse(localStorage.getItem(KEY)||"{}");
+let active=0,expanded=true;
+const tabs=document.getElementById("tabs"),main=document.getElementById("main");
+function save(){localStorage.setItem(KEY,JSON.stringify(state));renderStats();}
+function renderStats(){let done=allTasks.filter(t=>state[t.id]).length;let rev=allTasks.filter(t=>state[t.id]&&(/review|test|evaluation|checkpoint|retrospective|mock|acceptance|debugging/i.test(t.title+" "+t.tag))).length;let pct=Math.round(done/allTasks.length*100);document.getElementById("total").textContent=allTasks.length;document.getElementById("completed").textContent=done;document.getElementById("revised").textContent=rev;document.getElementById("percent").textContent=pct+"%";document.getElementById("heroPct").textContent=pct+"% complete";["mainBar","heroBar","totalBar"].forEach(id=>document.getElementById(id).style.width=pct+"%");}
+function renderTabs(){tabs.innerHTML=phases.map((p,i)=>`<button class="tab ${i===active?"active":""}" data-tab="${i}">${i<8?"Week "+(i+1):"Final 4 days"}</button>`).join("");tabs.querySelectorAll("button").forEach(b=>b.onclick=()=>{active=+b.dataset.tab;renderTabs();renderMain()});}
+function renderMain(){let p=phases[active],q=document.getElementById("search").value.toLowerCase(),f=document.getElementById("filter").value;let tasks=p.tasks.map((t,ti)=>({...{day:t[0],title:t[1],desc:t[2],tag:t[3]},id:`p${active}t${ti}`})).filter(t=>(!q||(t.day+" "+t.title+" "+t.desc+" "+t.tag).toLowerCase().includes(q))&&(f==="all"||(f==="done"&&state[t.id])||(f==="open"&&!state[t.id])));let groups=tasks;let body=groups.length?groups.map(t=>`<label class="task ${state[t.id]?"done":""}"><input type="checkbox" data-id="${t.id}" ${state[t.id]?"checked":""}><span><span class="task-title">${t.day}: ${t.title}</span><div class="task-desc">${t.desc}</div></span><span class="tag">${t.tag}</span></label>`).join(""):`<div class="empty">No tasks match this search/filter.</div>`;
+main.innerHTML=`<div class="section-head"><div><div class="eyebrow">${active===8?"Final stretch":"Phase "+(active+1)+" of 9"}</div><h2>${p.title}</h2><p>${p.subtitle}</p></div><div class="actions"><button class="btn" id="checkVisible">Mark visible complete</button><button class="btn" id="uncheckVisible">Uncheck visible</button></div></div><div class="weeks"><div class="week"><div class="weektop"><div><h3>Learning checklist</h3><small>${tasks.length} tasks in this view</small></div><span class="tag">${tasks.filter(t=>state[t.id]).length}/${tasks.length} done</span></div><div class="daylist">${body}</div></div><div class="week"><div class="weektop"><div><h3>Definition of done</h3><small>Use these as quality gates</small></div></div><div class="daylist">
+<div class="task"><span>①</span><span><span class="task-title">It runs from a clean setup</span><div class="task-desc">Another person can follow the README without needing your local machine state.</div></span></div>
+<div class="task"><span>②</span><span><span class="task-title">Failure paths are handled</span><div class="task-desc">Invalid inputs, missing evidence, timeouts, and provider errors have clear behaviour.</div></span></div>
+<div class="task"><span>③</span><span><span class="task-title">Evidence and trade-offs are visible</span><div class="task-desc">Show sources, tests, evaluation results, limitations, latency/cost observations, and decisions.</div></span></div>
+<div class="task"><span>④</span><span><span class="task-title">A real user can complete a task</span><div class="task-desc">Test with someone else; use feedback to prioritize product improvements.</div></span></div>
+</div></div></div><div class="links"><b>Lecture lookup:</b> <a target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=${encodeURIComponent("Coder Army "+p.title+" Forward Deployed Engineer GenAI")}">Find related Coder Army lessons ↗</a> · <b>Tip:</b> commit working code each day and keep a short learning log.</div>`;
+main.querySelectorAll('input[type="checkbox"][data-id]').forEach(cb=>cb.onchange=()=>{state[cb.dataset.id]=cb.checked;save();renderMain()});
+document.getElementById("checkVisible").onclick=()=>{tasks.forEach(t=>state[t.id]=true);save();renderMain()};
+document.getElementById("uncheckVisible").onclick=()=>{tasks.forEach(t=>delete state[t.id]);save();renderMain()};
+}
+document.getElementById("search").addEventListener("input",renderMain);document.getElementById("filter").addEventListener("change",renderMain);
+document.getElementById("themeBtn").onclick=()=>{document.body.classList.toggle("dark");localStorage.setItem("fdeTheme",document.body.classList.contains("dark")?"dark":"light")};
+if(localStorage.getItem("fdeTheme")==="dark")document.body.classList.add("dark");
+document.getElementById("resetBtn").onclick=()=>{if(confirm("Reset all 60-day tracker progress? This cannot be undone unless you exported a backup.")){state={};save();renderMain()}};
+document.getElementById("exportBtn").onclick=()=>{const blob=new Blob([JSON.stringify({exportedAt:new Date().toISOString(),progress:state},null,2)],{type:"application/json"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="genai-fde-progress-backup.json";a.click();URL.revokeObjectURL(a.href)};
+document.getElementById("expandBtn").onclick=()=>{expanded=!expanded;document.querySelectorAll(".week").forEach(w=>w.style.display=expanded?"":"none");document.getElementById("expandBtn").textContent=expanded?"Collapse week cards":"Expand all weeks"};
+renderTabs();renderMain();renderStats();
+</script>
+</body>
+</html>
