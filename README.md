@@ -78,6 +78,37 @@ This repository is for students, job seekers, and self-learners who want to:
 
 ---
 
+## 📱💻 How to Use an Individual HTML Tracker
+
+Want to use only the **Java Coding Tracker** or another specific tracker? You don't need to download the entire repository!
+
+### 📱 On Android Phone
+
+1. Open this GitHub repository in your mobile browser.
+2. Navigate to the folder containing the Java tracker HTML file.
+3. Open the Java tracker file (for example, `java-tracker.html`).
+4. Tap **Raw** to view the original HTML file.
+5. Download the file using your browser's download option, or use the download option provided by GitHub if available.
+6. Open your phone's **Downloads** folder and locate the HTML file.
+7. Open it using a compatible browser or HTML viewer.
+
+### 🍎 On iPhone
+
+1. Open the repository in Safari.
+2. Navigate to the Java tracker HTML file.
+3. Open the file and access its **Raw** content.
+4. Save the HTML file to the **Files** app.
+5. Open it using a compatible HTML viewer or browser-supported method.
+
+### 💻 On Laptop or Desktop
+
+1. Open the repository on GitHub.
+2. Navigate to the Java tracker HTML file.
+3. Open the file and click **Raw**.
+4. Right-click the page and select **Save As**, or use `Ctrl + S`.
+5. Save the file with the `.html` extension.
+6. Double-click the downloaded file to open it in your browser.
+
 ### ⭐ Make Every Day Count
 
 **Plan your preparation. Track your progress. Stay consistent. Achieve your goals.**
